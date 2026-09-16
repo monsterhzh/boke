@@ -1,0 +1,54 @@
+# Hugo 站点配置。baseURL 必须带 /boke/ 路径——这是项目页（project page）不是用户页
+# （user page），写错会导致全站 CSS/JS 404、页面裸奔。改仓库名必须同步改这里。
+baseURL = "https://monsterhzh.github.io/boke/"
+locale = "zh-cn"
+defaultContentLanguage = "zh-cn"
+title = "boke"
+theme = "PaperMod"
+enableRobotsTXT = true
+hasCJKLanguage = true
+buildDrafts = false
+buildFuture = false
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  env = "production"
+  author = "monsterhzh"
+  description = "Hugo + GitHub Pages 静态博客"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  hidemeta = false
+  hideSummary = false
+  showtoc = false
+  tocopen = false
+
+  [params.homeInfoParams]
+    Title = "你好，这里是 boke"
+    Content = "用 Hugo 写、用 GitHub Pages 发的静态博客。文章放在 content/posts/ 下。"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/monsterhzh"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "archives"
+    name = "归档"
+    url = "/archives/"
+    weight = 20
+  [[menu.main]]
+    identifier = "tags"
+    name = "标签"
+    url = "/tags/"
+    weight = 30
